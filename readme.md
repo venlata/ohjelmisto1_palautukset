@@ -1,4 +1,4 @@
-# Ohjelmisto 1 - Python harjoitukset
+# Ohjelmisto 1 - Python-harjoitukset
 
 **Venla Tapio**
 
