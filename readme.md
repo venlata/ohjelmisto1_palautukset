@@ -12,4 +12,4 @@ Tein tehtävät 3 & 4 30.8.2026 (+peliprojektin alku)
 
 ## Moduuli 5
 
-Tein tehtävän 5 (osat 1-5) 2.9.2026, + peliprojektin jatko
+Tein tehtävän 5 (osat 1-5) 2.9.2026, + peliprojektin jatko. Tehtävä 6 tehty 5.-6.9.2026.
