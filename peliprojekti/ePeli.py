@@ -14,16 +14,17 @@ while True:
         print(f"Hei {nimi1}, {ika}v. Tervetuloa ePeliin!\n")
         while ika >= 12:
             print("\033[1;31m(っ◕‿◕)っ PÄÄVALIKKO\n")
+            print("Komennot:\nHypi\nNäytä kieltä\n???\nLopeta\n")
 
             komento = input("Anna komento: \033[0m")
             print("\n")
 
-            if komento == "lopeta":
+            if komento == "Lopeta":
                 break
 
-            elif komento == "olen iloinen":
-                print("Erikoista!\n")
-            elif komento == ":p":
+            elif komento == "Hypi":
+                print("Hyvin tehty!\n")
+            elif komento == "Näytä kieltä":
                 print("(◕‿-)\n")
     break
 
