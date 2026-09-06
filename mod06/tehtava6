@@ -1,0 +1,49 @@
+#Tehtävä 6 osa 1
+import random
+arvat = int(input("Anna arpakuutioiden määrä: "))
+summa = 0
+for maara in range(arvat):
+    luku = random.randint(1,6)
+    summa += luku
+print(f"Tässä summa arpakuutioista: {summa}")
+
+#Tehtävä 6 osa 2
+numerot = []
+
+while True:
+    kysmys = input("Anna numero: ")
+    if kysmys == "":
+        break
+    numerot.append(int(kysmys))
+
+numerot.sort(reverse=True)
+for aaa in range(5):
+    print(numerot[aaa])
+
+#Tehtävä 6 osa 3
+
+aluku = int(input("Anna kokonaisluku:\n"))
+onaluku = True
+
+if aluku < 2:
+    onaluku = False
+else:
+    for llluku in range(2, aluku):
+        if aluku % llluku == 0:
+            onaluku = False
+            break
+if onaluku:
+    print("Luku on alkuluku.")
+else:
+    print("Lukusi ei ole alkuluku.")
+    
+#Tehtävä 6 osa 4
+
+kaapungit = []
+
+for yritykset in range(5):
+    kaapunki = input("Anna kaupungin nimi: ")
+    kaapungit.append(kaapunki)
+    yritykset += 1
+for kaapunkini in kaapungit:
+    print(kaapunkini)
