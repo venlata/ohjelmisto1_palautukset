@@ -28,7 +28,7 @@ while True:
 def paavalikko():
     while True:
         print("\033[1;31m(っ◕‿◕)っ PÄÄVALIKKO\n")
-        print("Komennot:\n1 = Hyppää kyytiin\n2 = Näytä kieltä\n3 = Lisää tavara reppuun\n4 = Lopeta\n5 = ???\n")
+        print("Komennot:\n1 = Hyppää kyytiin\n2 = Näytä kieltä\n3 = Lisää tavara reppuun\n4 = Lopeta\n5 = ???\n6 = Tsekkaa repun sisältö")
 
         komento = input("Anna komento: \033[0m")
         print("\n")
@@ -63,12 +63,18 @@ def paavalikko():
                 reppuinventory.append(tavara1)
                 return "Hyvä valinta.\n"
             print(pvkomento3())
+        elif komento == "6":
+            def tulostarep():
+                return f"Sinulla on repussasi: {reppuinventory}"
+            print(tulostarep)
         else:
             def pvkomento5():
                 return "En ymmärrä....\n"
             print(pvkomento5())
 
-        
+def tulostarep():
+    return f"Sinulla on repussasi: {reppuinventory}"
+
 
 paavalikko()
-print(f"Sinulla on repussasi: {reppuinventory}")
+
