@@ -17,3 +17,7 @@ Tein tehtävän 5 (osat 1-5) 2.9.2026, + peliprojektin jatko. Tehtävä 6 tehty 
 ## Moduuli 7
 
 Tehtävä 7 saatettu päätökseen 10.9.2026, peliprojektin jatko tulossa
+
+## Moduuli 8
+
+Tein tehtävän 8 12.9.2026
