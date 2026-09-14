@@ -33,9 +33,6 @@ while True:
         isoin = luku
 print(f"Tässä pienin luku: {pienin}\nTässä isoin luku: {isoin}")
 
-#Luulin pitkään ettei tää toimi ja lisäsin ja poistin osioita koska unohin lisätä t5o3 sulut :D 
-#Kunnes kokeilin Thonnyn kautta myös
-
 #Tehtävä 5 osa 4
 
 
