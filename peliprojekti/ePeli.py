@@ -10,13 +10,6 @@ ika = int(input("Mikä on ikäsi?\n"))
 reppuinventory = []
 
 
-def komentof1(pvkomento1):
-    return "\033[1;31mHyvin tehty!\n\033[0m"
-def komentof2(pvkomento2):
-    return "\033[1;31m(◕‿-)\n\033[0m"
-def komentof5(komento5):
-    return "\033[1;31m....\n\033[0m"
-
 while True:
     if ika < 12:
         print("Tänne ei pieniä lapsia haluta! Hyvästi!")
