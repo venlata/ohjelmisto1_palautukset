@@ -71,3 +71,6 @@ def tulostarep():
 
 paavalikko()
 
+#Seuraavana voisi lisätä luokallisen sivuhahmoja joita voi valita mukaan tms ?
+# ja muokata nuo ABC-vaihtoehdot tuonne valikkoihin oikein esim. dictionarylla
+#Tehdä pelaajasta olio jolla nimi, ikä jne
