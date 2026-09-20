@@ -21,3 +21,7 @@ Tehtävä 7 saatettu päätökseen 10.9.2026, peliprojektin jatko tulossa
 ## Moduuli 8
 
 Tein tehtävän 8 12.9.2026
+
+## Moduuli 9
+
+Tehtävä saatettu päätökseen 20.9.2026, t10 tulossa
