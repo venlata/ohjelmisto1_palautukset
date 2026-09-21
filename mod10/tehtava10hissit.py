@@ -78,4 +78,5 @@ drivin = int(input("Minkä talon hissiä haluat ajaa (numero)? "))
 drivin -= 1
 elly = int(input("Mitä hissiä haluat ajaa? "))
 floor = int(input("Mihin kerrokseen haluat? "))
-drivin.drive.elevator(elly, floor)
+houselist[drivin].drive.elevator(elly, floor)
+#En nyt keksi miten kutsua tuota taloa :(
