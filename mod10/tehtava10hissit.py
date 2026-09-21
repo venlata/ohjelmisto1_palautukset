@@ -44,13 +44,12 @@ class House:
 
     def drive_elevator(self, elnumber, targetfloor):
         elnumber = elnumber -1
-        elv = self.elevators[elnumber]
-        elv.moveto(targetfloor)
+        elnumber.moveto(targetfloor)
 
     def alarm(self):
         self.moveto(self.bottomfloor)
 
-
+#Luin ohjeen väärin niin tässä on tämmönen monimutkanen mössö:
 houselist = []
 print("Luo talo!\nAnna ensimmäisen kysymyksen vastaukseksi 0 kun alkaa olla tarpeeksi monta.")
 while True:
@@ -73,10 +72,14 @@ for item in houselist:
     for hissi in item.elevators:
         print(f"Hissin ylin kerros: {hissi.topfloor}, Hissin alin kerros: {hissi.bottomfloor}")
 
+ho1 = House(0, 9, 2)
 
-drivin = int(input("Minkä talon hissiä haluat ajaa (numero)? "))
-drivin -= 1
+# drivin = int(input("Minkä talon hissiä haluat ajaa (numero)? "))
+# drivin -= 1
 elly = int(input("Mitä hissiä haluat ajaa? "))
 floor = int(input("Mihin kerrokseen haluat? "))
-houselist[drivin].drive.elevator(elly, floor)
-#En nyt keksi miten kutsua tuota taloa :(
+# destination = houselist[drivin]
+ho1.drive_elevator(elly, floor)
+
+
+#fixes still needed
