@@ -40,46 +40,50 @@ class House:
     def __init__(self, lowfloor, upfloor, elevators):
         self.lowfloor = lowfloor
         self.upfloor = upfloor
-        self.elevators = []
+        temp = []
+        for _ in range(elevators):
+            newelevator = Hissi(upfloor, lowfloor)
+            temp.append(newelevator)
+        self.elevators = temp
 
     def drive_elevator(self, elnumber, targetfloor):
-        elnumber = elnumber -1
-        elnumber.moveto(targetfloor)
+        self.elevators[elnumber - 1].moveto(targetfloor)
 
     def alarm(self):
         self.moveto(self.bottomfloor)
 
 #Luin ohjeen väärin niin tässä on tämmönen monimutkanen mössö:
-houselist = []
-print("Luo talo!\nAnna ensimmäisen kysymyksen vastaukseksi 0 kun alkaa olla tarpeeksi monta.")
-while True:
-    creationlow = int(input("Anna talon alimman kerroksen numero: "))
-    creationhigh = int(input("Anna talon ylimmän kerroksen numero: "))
-    creationelev = int(input("Anna hissien lukumäärä: "))
-    newhouse = House(creationlow, creationhigh, creationelev)
-    houselist.append(newhouse)
-    for hissit in range(creationelev):
-        newelevator = Hissi(creationhigh, creationlow)
-        newhouse.elevators.append(newelevator)
-    if creationlow == 0:
-        break
+# houselist = []
+# print("Luo talo!\nAnna ensimmäisen kysymyksen vastaukseksi 0 kun alkaa olla tarpeeksi monta.")
+# while True:
+#     creationlow = int(input("Anna talon alimman kerroksen numero: "))
+#     creationhigh = int(input("Anna talon ylimmän kerroksen numero: "))
+#     creationelev = int(input("Anna hissien lukumäärä: "))
+#     newhouse = House(creationlow, creationhigh, creationelev)
+#     houselist.append(newhouse)
+#     for hissit in range(creationelev):
+#         newelevator = Hissi(creationhigh, creationlow)
+#         newhouse.elevators.append(newelevator)
+#     if creationlow == 0:
+#         break
 
+newhouse = House(0, 12, 4)
 for item in newhouse.elevators:
     print(f"Hissin ylin kerros: {item.topfloor}, Hissin alin kerros: {item.bottomfloor}")
 
-for item in houselist:
-    print(f"Talon alin kerros: {item.lowfloor} Talon ylin kerros: {item.upfloor}")
-    for hissi in item.elevators:
-        print(f"Hissin ylin kerros: {hissi.topfloor}, Hissin alin kerros: {hissi.bottomfloor}")
-
-ho1 = House(0, 9, 2)
+# for item in houselist:
+#    print(f"Talon alin kerros: {item.lowfloor} Talon ylin kerros: {item.upfloor}")
+#    for hissi in item.elevators:
+#        print(f"Hissin ylin kerros: {hissi.topfloor}, Hissin alin kerros: {hissi.bottomfloor}")
 
 # drivin = int(input("Minkä talon hissiä haluat ajaa (numero)? "))
 # drivin -= 1
 elly = int(input("Mitä hissiä haluat ajaa? "))
 floor = int(input("Mihin kerrokseen haluat? "))
 # destination = houselist[drivin]
-ho1.drive_elevator(elly, floor)
+newhouse.drive_elevator(elly, floor)
+
+for item in newhouse.elevators:
+    print(f"Hissi lokaatiossa {item.current}")
 
 
-#fixes still needed
