@@ -21,25 +21,7 @@ class Auto:
         else:
             self.mileage += 0
 
-    
 
-
-auto0 = Auto("ABC-123", 142, 0, 0)
-
-auto0.speeding(30)
-auto0.trip(2.5)
-
-print(f"{auto0.regno}\nMaksiminopeus: {auto0.maxspeed}km/h\nTämänhetkinen nopeus: {auto0.currentspeed}km/h\nMittarilukema: {auto0.mileage}")
-
-auto0.speeding(70)
-auto0.speeding(50)
-auto0.trip(1.7)
-
-print(f"{auto0.regno}\nMaksiminopeus: {auto0.maxspeed}km/h\nTämänhetkinen nopeus: {auto0.currentspeed}km/h\nMittarilukema: {auto0.mileage}")
-
-auto0.speeding(-200)
-
-print(f"{auto0.regno}\nMaksiminopeus: {auto0.maxspeed}km/h\nTämänhetkinen nopeus: {auto0.currentspeed}km/h\nMittarilukema: {auto0.mileage}")
 
 autos = []
 maara = 1
@@ -52,33 +34,28 @@ while maara <= 10:
     autos.append(cname)
     maara += 1
 
+
 onkaynnis = True
 class Competish:
-    def __init__(self, comname, kilometers, vehiclelist):
+    def __init__(self, comname, kilometers, vehiclelist = autos):
         self.comname = comname
         self.kilometers = kilometers
         self.vehiclelist = autos
-    def onehourlater(self,):
+    def onehourlater(self):
         onkaynnis = True
-        for item in autos:
-            if item.mileage < 10000:
-                item.speeding(random.randint(-10,15))
-            item.trip(1)
-            if item.mileage >= 10000:
-                print(f"Auto {item.regno} on ekana maalissa kilsoilla {item.mileage}!")
-                onkaynnis = False
+        while onkaynnis:
+            for item in autos:
+                if item.mileage < self.kilometers:
+                    item.speeding(random.randint(-10,15))
+                    item.trip(1)
+                if item.mileage >= self.kilometers:
+                    print(f"Auto {item.regno} on ekana maalissa kilsoilla {item.mileage}!")
+                    onkaynnis = False
+            if not onkaynnis:
+                break
 
-while onkaynnis:
-    for item in autos:
-        if item.mileage < 10000:
-            item.speeding(random.randint(-10,15))
-            item.trip(1)
-        if item.mileage >= 10000:
-            print(f"Auto {item.regno} on ekana maalissa kilsoilla {item.mileage}!")
-            onkaynnis = False
-    if not onkaynnis:
-        break
-    
+c1 = Competish("Kilpailu1", 8000)
+c1.onehourlater()
 print("Kilpailun lopputulos:")
 for item in autos:
     print(f"Auto:{item.regno}, Nopeus: {item.currentspeed}, Max. nopeus: {item.maxspeed}, Kuljettu matka: {item.mileage}")
