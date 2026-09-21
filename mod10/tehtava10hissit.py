@@ -47,6 +47,9 @@ class House:
         elv = self.elevators[elnumber]
         elv.moveto(targetfloor)
 
+    def alarm(self):
+        self.moveto(self.bottomfloor)
+
 
 houselist = []
 print("Luo talo!\nAnna ensimmäisen kysymyksen vastaukseksi 0 kun alkaa olla tarpeeksi monta.")
@@ -70,5 +73,9 @@ for item in houselist:
     for hissi in item.elevators:
         print(f"Hissin ylin kerros: {hissi.topfloor}, Hissin alin kerros: {hissi.bottomfloor}")
 
-drivin = int(input("Minkä talon hissiä haluat ajaa? "))
-#emmää jaksa :( jatkan joskus
+
+drivin = int(input("Minkä talon hissiä haluat ajaa (numero)? "))
+drivin -= 1
+elly = int(input("Mitä hissiä haluat ajaa? "))
+floor = int(input("Mihin kerrokseen haluat? "))
+drivin.drive.elevator(elly, floor)
