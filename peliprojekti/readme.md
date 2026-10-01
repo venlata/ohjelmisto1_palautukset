@@ -6,3 +6,5 @@ Aloitettu 30.8.2026; ohjelma kysyy pelaajan nimen ja iän ja tervehtii häntä.
 6.9.2026: Komentoihin muokkauksia
 
 10.9.2026: Suuren taistelun jälkeen funktioita sijoitettu päävalikkoon
+
+30.9.2026: Edessä tehtävät projekti 4 & 5

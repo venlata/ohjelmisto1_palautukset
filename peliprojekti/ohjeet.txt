@@ -1,0 +1,3 @@
+Pelin ohjeet:
+Pelin rakenne on yksinkertainen; voit siirtyä vain eteenpäin, ja saat selkeät vaihtoehdot [A, B, C, ...] etenemiseen.
+Jos vastaat vaihtoehtoihin muuten kuin A, B, C, tai muu annettu vaihtoehto, et pääse etenemään.
