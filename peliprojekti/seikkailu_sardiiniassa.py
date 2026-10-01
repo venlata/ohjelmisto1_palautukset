@@ -39,8 +39,8 @@ room2a = Room("Pub Sihisevä Sardiini", "Rätti")
 room2b = Room("Seppo Sardiinin koti")
 room3a1 = Room("Baarin henkilökunnan huone")
 room3a2 = Room("Baarin vessa")
-room3b1 = Room("Sepon pihavaja")
-room3b2 = Room("Sepon pihavajan ullakko")
+room3b1 = Room("Sardiinitehdas")
+room3b2 = Room("Tehtaan konsolihuone")
 room4a = Room("Sardiini highway")
 room4b = Room("Levämetsä")
 room5 = Room("Maurin uusi pesä")
@@ -67,25 +67,20 @@ def meetthemayor():
     hellomayor = input("A = Tervehdi pormestaria kuin normaali muikku ja lupaa auttavasi parhaan mukaan\nB = Sylkäise maahan ja nyökkää pormestarille\nC = Kumarra syvään ja sano 'Oi rouva pormestari; vannon sinulle uskollisuuteni'\n")
     def maya():
         player1.mayorpoints += random.randint(2,4)
-        return "Pormestari kiittää sinua. Voit erottaa hänen silmäkulmastaan helpotuksen kyyneleen."
+        return "Pormestari kiittää sinua. Voit erottaa hänen silmäkulmastaan helpotuksen kyyneleen.\n"
     def mayb():
         player1.mayorpoints += 1
-        return "Pormestari vilkaisee sinua kauhuissaan, mutta hyväksyy vastauksen hiljaa nyökäten. Kaikki apu on tarpeen."
+        return "Pormestari vilkaisee sinua kauhuissaan, mutta hyväksyy vastauksen hiljaa nyökäten. Kaikki apu on tarpeen.\n"
     def mayc():
         player1.mayorpoints -= 1
-        return "Pormestaria näkyvästi etoo limainen käytöksesi.\nPORMESTARI: 'Olet melko erikoinen, mutta apusi on silti tarpeen...'"
-    while True:
-        if hellomayor == "A":
-            maya()
-            break
-        elif hellomayor == "B":
-            mayb()
-            break
-        elif hellomayor == "C":
-            mayc()
-            break
-        else:
-            print("Vastaa vain A, B, tai C.")
+        return "Pormestaria näkyvästi etoo limainen käytöksesi.\nPORMESTARI: 'Olet melko erikoinen, mutta apusi on silti tarpeen...'\n"
+    while hellomayor != "A" and hellomayor != "B" and hellomayor != "C":
+        hellomayor = input("Anna vastaus A, B tai C.\n")
+    choices = {"A": maya, "B": mayb, "C": mayc}
+    room_fun = choices.get(hellomayor)
+    print(room_fun())
+        
+
 
 def mainmenu():
     print("PORMESTARI: 'Voit valita yhden tavaran mukaan kaupungintalon vitriinistä. Toivon mukaan siitä on meille apua.'\n")
@@ -102,16 +97,11 @@ def mainmenu():
     crossing()
 
 def crossing():
-    while True:
-        crossing1 = input("Haluatko tien A vai B?\n")
-        if crossing1 == "A":
-            player1.move(room2a)
-            break
-        elif crossing1 == "B":
-            player1.move(room2b)
-            break
-        else:
-            crossing1 = input("Niin siis A vai B?\n")
+    crossing1 = input("Haluatko tien A vai B?\n")
+    if crossing1 != "A" and crossing1 != "B":
+        crossing1 = input("Niin siis A vai B?\n")
+    choices = {"A": room2afun, "B": room2bfun}
+        
 
 def room2afun():
     print(f"Saavutte paikkaan {player1.currentroom}. Pormestari kavahtaa paikan hajua.\nPaikan kanta-asiakas nappaa tiskiltä rätin ja heittää sinua sillä. Saat kopin.\nBaarimikko nauraa räkäisesti tapahtuneelle.")
@@ -131,13 +121,43 @@ def room2afun():
         else:
             crossing2a = input("Tuo ei ole A tai B. Valitse A tai B")
 
+def room2bfun():
+    print(f"Saavutte paikkaan {room2b}. Seppo Sardiini istuu kuistillaan siemaillen tomaattimehua.\nSEPPO: 'Kuka siellä kulkee?'")
+    seppomeet = input("Mitä kerrot Sepolle tilanteesta?\nA = Selitä kuinka jalosti autat kyvytöntä Pormestaria etsimään lemmikkiään Mauria\nB = Kerro kuinka Mauri on karannut kotoaan, ja etsitte häntä yhdessä Pormestarin kanssa\nC = Kysy Sepolta mikä oikeuttaa hänet kysymään\n")
+    while seppomeet != "A" and seppomeet != "B" and seppomeet != "C":
+        seppomeet = input("A, B vai C?\n")
+    def sepa():
+        player1.mayorpoints -= 2
+        print("Seppo Sardiini hymähtää.\nSEPPO: 'Olenhan saattanut nähdä tuon otuksen... Ja tunnen katkaravut hyvin.'\nPormestari mulkaisee sinua sanavalintojesi johdosta, mutta viittoo silti Seppoa jatkamaan.\n")
+        print("SEPPO: 'Jos vain kuljette suoraan takapihani läpi, pääsette Sardiinitehtaan alueelle. Alue on aidattu ja vaarallinen, mutta sinne Mauri suuntasi...'")
+        print("Suuntaatte heti Sepon takapihalle, ja siitä kohti tehdasta.")
+        room3b1fun()
+    def sepb():
+        player1.mayorpoints +=1
+        print("SEPPO: 'Vai niin on käynyt! Minähän näin Maurin ryömimässä kohti Sardiinitehdasta toissapäivänä.\nPormestarin silmiin tulee toivon häivä.")
+        print("SEPPO: 'Kyllä näin on näreet.. Ottakaa kuitenkin tästä juotavaa matkalle vielä.'\nSeppo ojentaa sinulle pullon jossa on... nestettä? Ehkä se on juotavaa.\nSuuntaatte Sepon takapihalle ja siitä kohti tehdasta.")
+        room3b1fun()
+    def sepc():
+        player1.mayorpoints -= 3
+        print("SEPPO: 'Pormestari, tällaistako seuraa sinä pidät?'\nPormestari näyttää nolostuneelta.")
+        seppochoice = input("Pyydätkö Sepolta anteeksi? Se voi auttaa teitä eteenpäin matkallanne.\nA = Kyllä\nB = Ei")
+        while seppochoice != "A" and seppochoice != "B":
+            seppochoice = input("A tai B!!! Ei mitään muuta.")
+        if seppochoice == "A":
+            room3b1fun()
+        elif seppochoice == "B":
+            room6afun()
+
+def room3b1fun():
+    print(f"Saavutte paikkaan {player1.currentroom}.\nTehtaan ovi pamahtaa ")
+        
 def room3a1fun():
     print(f"Saavutte paikkaan {player1.currentroom}.\nHuone näyttää pölyiseltä, mutta muuten siistiltä.")
     useitemratti = input("Mauria ei näy huoneessa, mutta sinulla on tilaisuus tehdä hyvä teko ja pyyhkiä rätillä pölyjä pois.\nKäytätkö rättiä?\nA = Kyllä\nB = Ei")
     while True:
         if useitemratti == "A":
             inventory_backpack.remove(ratti)
-            mayorpoints += 4
+            player1.mayorpoints += 4
             print("PORMESTARI: 'Olipa mukavasti tehty.")
             break
         elif useitemratti == "B":
@@ -153,12 +173,12 @@ def room3a2fun():
     useitemratti2 = ("Pormestarilla on tippa silmäkulmassa. Liikuttaako sinuakin Nurkkasardiinin huono kohtelu?\nKäytätkö rättiä hänen putsaamiseensa?\nA = Kyllä\nB = Ei")
     while True:
         if useitemratti2 == "A":
-            inventory_backpack.remove(ratti)
-            mayorpoints += 5
+            player1.loseitem("Rätti")
+            player1.mayorpoints += 5
             print("NURKKASARDIINI: 'Kiitos! Kiitos tuhannesti!'")
             break
         elif useitemratti2 == "B":
-            mayorpoints -= 2
+            player1.mayorpoints -= 2
             ("Oletpas pihi kun et rättiä viitsi käyttää!")
             break
         else:
