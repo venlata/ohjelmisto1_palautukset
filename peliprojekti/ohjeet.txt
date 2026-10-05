@@ -2,5 +2,6 @@ Ohjeet:
 Pelin rakenne on yksinkertainen; voit siirtyä vain eteenpäin, ja saat selkeät vaihtoehdot [A, B, C, ...] etenemiseen.
 Jos vastaat vaihtoehtoihin muuten kuin A, B, tai muu annettu vaihtoehto, et pääse etenemään.
 Peli päättyy joko onnistumiseen (Mauri saatettu kotiin) tai epäonnistumiseen (jotain muuta on käynyt).
-Peli tallentuu automaattisesti joka huoneen yhteydessä, joten voit halutessasi jatkaa peliä myöhemmin.
 Jos haluat katsoa ystävyyspisteesi Pormestarin kanssa, se on mahdollista tehdä pelin alettua ennen uuteen huoneeseen astumista.
+Samalla sinulla on mahdollisuus keskeyttää peli. Peli tallennetaan keskeyttämisen yhteydessä.
+Saat vaihtoehdon jatkaa aiempaa peliä kun ajat pelin uudelleen.

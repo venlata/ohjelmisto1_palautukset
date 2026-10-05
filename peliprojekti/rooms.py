@@ -95,6 +95,7 @@ def room2bfun(player_in_room):
         player_in_room.mayorpoints +=1
         print("SEPPO: 'Vai niin on käynyt! Minähän näin Maurin ryömimässä kohti Sardiinitehdasta toissapäivänä.\nPormestarin silmiin tulee toivon häivä.")
         print("SEPPO: 'Kyllä näin on näreet.. Ottakaa kuitenkin tästä juotavaa matkalle vielä.'\nSeppo ojentaa sinulle pullon jossa on... nestettä? Ehkä se on juotavaa.\nSuuntaatte Sepon takapihalle ja siitä kohti tehdasta.\n")
+        player_in_room.collectitem(items_dict.get("juoma"))
         nextroom = "room3b1"
         player_in_room.move(rooms_dict.get(nextroom))
         return nextroom
