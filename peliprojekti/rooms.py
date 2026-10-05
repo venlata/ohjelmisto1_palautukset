@@ -61,7 +61,6 @@ def crossing(player_in_room):
         
 
 def room2afun(player_in_room):
-    print("DEBUG: room 2a player ", player_in_room.current_room.name)
     print(f"Saavutte paikkaan {player_in_room.current_room.name}. Pormestari kavahtaa paikan hajua.\nPaikan kanta-asiakas nappaa tiskiltä rätin ja heittää sinua sillä. Saat kopin.\nBaarimikko nauraa räkäisesti tapahtuneelle.")
     player_in_room.collectitem(items_dict.get("ratti"))
     print("BAARIMIKKO: 'Tervetuloa Sihisevään Sardiiniin. Haluatteko juotavaa?'\nPORMESTARI: 'Ei missään nimessä. Etsimme kadonnutta katkarapuani Mauria. Onko täällä näkynyt?'")
@@ -80,7 +79,6 @@ def room2afun(player_in_room):
 
 
 def room2bfun(player_in_room):
-    print("DEBUG: room 2b player ", player_in_room.current_room.name)
     print(f"Saavutte paikkaan {player_in_room.current_room.name}. Seppo Sardiini istuu kuistillaan siemaillen tomaattimehua.\nSEPPO: 'Kuka siellä kulkee?'")
     seppomeet = input("Mitä kerrot Sepolle tilanteesta?\nA = Selitä kuinka jalosti autat kyvytöntä Pormestaria etsimään lemmikkiään Mauria\nB = Kerro kuinka Mauri on karannut kotoaan, ja etsitte häntä yhdessä Pormestarin kanssa\nC = Kysy Sepolta mikä oikeuttaa hänet kysymään\n")
     while seppomeet != "A" and seppomeet != "B" and seppomeet != "C":
@@ -117,10 +115,10 @@ def room2bfun(player_in_room):
     
 
 def room3b1fun(player_in_room):
-    print(f"Saavutte paikkaan {player_in_room.current_room.name}.\nTehtaan ovi pamahtaa kiinni takananne.\nPormestari säpsähtää, ja hikikarpalo valuu otsaltasi.\n")
-    creaturechoice = input("Tehtaan pimeästä nurkasta pötkähtää ulos merimakkara.\nSen ilmeitä on vaikea lukea koska sillä ei ole kasvoja, mutta tunnet siitä huokuvan pahuuden.\nEhkä sinun täytyy iskeä ensin...\nMitä teet?\nA = Juokse kuin pelkuri\nB = Suojaa Pormestaria\n")
+    print(f"Saavutte paikkaan {player_in_room.current_room.name}.\nSardiineilla ei ole enää tarvetta tehtaalle, joten yhtään työntekijää ei ole näkyvissä.\nTehtaan ovi pamahtaa kiinni takananne.\nPormestari säpsähtää, ja hikikarpalo valuu otsaltasi.\n")
+    creaturechoice = input("Tehtaan pimeästä nurkasta pötkähtää ulos merimakkara (vieraslaji alueella).\nSen ilmeitä on vaikea lukea koska sillä ei ole kasvoja, mutta tunnet siitä huokuvan pahuuden.\nEhkä sinun täytyy iskeä ensin...\nMitä teet?\nA = Juokse kuin pelkuri\nB = Suojaa Pormestaria\n")
     while creaturechoice != "A" and creaturechoice != "B":
-        creaturechoice = input("Anna vastaukseksi A tai B.")
+        creaturechoice = input("Anna vastaukseksi A tai B.\n")
     def fight():
         if items_dict.get("sanakirja") in player_in_room.inventory:
             sfight = input("Sinulla näkyy olevan taskussasi sanakirja.\nSiitä ei ole hyötyä taistelussa. Vai onko?\nValitse:\nA = Heitä pahaa merimakkaraa sanakirjalla\nB = Anna sanakirjan pysyä repussasi\n")
