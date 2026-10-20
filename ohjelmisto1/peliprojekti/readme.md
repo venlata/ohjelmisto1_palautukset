@@ -11,4 +11,4 @@ Aloitettu 30.8.2026; ohjelma kysyy pelaajan nimen ja iän ja tervehtii häntä.
 
 ??.10.-4.10. Pelin viimeinen versio aloitettu. Huone/toimintofunktioista tehty käytettävät & pelilooppi saatu valmiiksi ja toimivaksi 4.10.2026.
 
-5.10. Tallennustoiminto & lukutoiminnot
+5.10. Tallennustoiminto & lukutoiminnot.
