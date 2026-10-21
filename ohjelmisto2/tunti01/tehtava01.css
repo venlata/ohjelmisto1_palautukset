@@ -1,0 +1,43 @@
+body {
+    text-align:center;
+    background-color:rgb(255, 238, 246);
+    margin: 30px;
+    cursor: url("https://cdn.cursors-4u.net/previews/my-melody-ver-20-cursor-set-arrow-e39adea0-preview-48.webp"), auto;
+}
+h1 {
+    color:rgb(229, 93, 161);
+    font-size: 27px;
+}
+p {
+    
+    color:darkslategrey;
+    font-size: 16px;
+}
+table {
+    border-spacing: 5px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 1px darksalmon solid;
+    font-size: 14px;
+    text-align:left;
+    color: darkslategrey;
+    line-height: 1.5;
+    
+}
+tbody > tr:nth-of-type(even) {
+    background-color: rgb(255, 214, 247);
+}
+td, th {
+    border: 1px darksalmon solid;
+    padding: 5px 10px;
+}
+img {
+    max-width: 35%;
+    height: auto;
+    
+}
+a {
+    color:rgb(229, 93, 161);
+    text-decoration:underline;
+    text-align: center;
+}
