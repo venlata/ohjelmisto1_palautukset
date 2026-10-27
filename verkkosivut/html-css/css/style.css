@@ -24,7 +24,7 @@ header ul {
 }
 header ul li a {
     text-decoration: underline;
-    color: rgb(226, 62, 158); 
+    color: rgb(93, 0, 54);
 }
 
 /*Kaikkien Main jutut*/
@@ -56,7 +56,6 @@ p {
 contact main {
     display: flex;
     flex-direction: column;
-    
     text-align: center;
     margin-top: 2rem;
 }
@@ -78,7 +77,7 @@ contact main {
 
 .contact p a {
     text-decoration: underline;
-    color: rgb(226, 62, 158); 
+    color: rgb(112, 1, 66); 
 }
 
 .flex-container {
