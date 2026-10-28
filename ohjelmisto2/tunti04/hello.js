@@ -6,3 +6,4 @@ console.log("Helllo!")
 // document.querySelector("#target").innerHTML = "Nimi: " + nimi + ", Ikä: " + ika;
 
 const name = prompt("Anna nimi: ")
+document.querySelector("#target").innerHTML = "Moi " + name + "!"

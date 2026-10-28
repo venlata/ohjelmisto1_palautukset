@@ -1,1 +1,2 @@
-console.log("I'm printing to console!")
+const name = prompt("Anna nimi: ")
+document.querySelector("#target").innerHTML = "Moi " + name + "!"
