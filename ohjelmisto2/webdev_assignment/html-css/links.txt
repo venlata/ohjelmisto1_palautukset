@@ -1,0 +1,3 @@
+https://users.metropolia.fi/~venlatap/html-css/verkkosivut/
+https://users.metropolia.fi/~venlatap/html-css/screenshots/screenshots.html
+https://github.com/venlata/ohjelmisto1_palautukset/tree/main/ohjelmisto2/webdev_assignment/html-css
