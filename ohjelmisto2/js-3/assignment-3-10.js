@@ -39,13 +39,15 @@ for (let voter = 1; voter <= voterAmount; voter++){
 };
 
 voteForThese.sort((a, b) => b.votes - a.votes);
-console.log(voteForThese)
 
-const showWinner = () => {
-    return voteForThese.forEach(votees =>{
-        (votees.name + ": " + votees.votes)
-    })
+let winner = voteForThese[0]
+
+console.log("Voittaja on " + winner.name+ " " + winner.votes + " pisteellä.");
+console.log("Tulokset:");
+
+voteForThese.forEach(votees => {
+    console.log(votees.name + ": " + votees.votes + " pistettä");
 }
+);
 
-
-document.querySelector("#target").innerHTML = "Äänet: " + showWinner()
+document.querySelector("#target").innerHTML = "Voittaja: " + voteForThese[0].name
