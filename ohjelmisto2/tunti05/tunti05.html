@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunti 5 testaus</title>
+    <link rel="stylesheet" type="text/css" href="tunti05.css">
+</head>
+<body>
+    <section id="logo">
+    </section>
+    <button>Napsauta minua👁️〰️👁️</button>
+    <script>
+        const button = document.querySelector("button");
+        button.addEventListener("click", function (evt) {
+            alert("Elementtiä " + evt.currentTarget.tagName + " napsautettiin");
+        });
+    </script>
+    <button class="button" >
+        Napero
+    </button>
+    <form action="#">
+  <!-- action-attribuutti määrittää, minne lomakkeen tiedot lähetetään, kun lomake lähetetään. Tässä arvo on "#" eli nykyinen sivu, joten tietoja ei käsitellä missään. -->
+
+  <!-- Tekstikenttä -->
+  <label for="name">Nimi:</label><br />
+  <input type="text" id="name" name="name" /><br /><br />
+
+  <!-- Sähköpostikenttä -->
+  <label for="email">Sähköposti:</label><br />
+  <input type="email" id="email" name="email" /><br /><br />
+
+  <!-- Salasanakenttä -->
+  <label for="password">Salasana:</label><br />
+  <input type="password" id="password" name="password" /><br /><br />
+
+  <!-- Lukukenttä -->
+  <label for="age">Ikä:</label><br />
+  <input type="number" id="age" name="age" /><br /><br />
+
+  <!-- Päivämääräkenttä -->
+  <label for="date">Päivämäärä:</label><br />
+  <input type="date" id="date" name="date" /><br /><br />
+
+  <!-- Valintanapit -->
+  <p>Sukupuoli:</p>
+  <input type="radio" id="male" name="gender" value="male" />
+  <label for="male">Mies</label><br />
+  <input type="radio" id="female" name="gender" value="female" />
+  <label for="female">Nainen</label><br /><br />
+
+  <!-- Valintaruutu -->
+  <input type="checkbox" id="subscribe" name="subscribe" />
+  <label for="subscribe">Tilaa uutiskirje</label><br /><br />
+
+  <!-- Pudotusvalikko -->
+  <label for="country">Maa:</label><br />
+  <select id="country" name="country">
+    <option value="fi">Suomi</option>
+    <option value="pl">Puola</option>
+    <option value="es">Espanja</option></select
+  ><br /><br />
+
+  <!-- Tekstialue -->
+  <label for="message">Viesti:</label><br />
+  <textarea id="message" name="message" rows="4" cols="30"></textarea
+  ><br /><br />
+
+  <!-- Lähetyspainike -->
+  <input type="submit" value="Lähetä" />
+</form>
+    <script src="tunti05.js">
+    </script>
+</body>
+</html>
