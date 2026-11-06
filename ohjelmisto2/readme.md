@@ -6,4 +6,4 @@ Oma verkkosivu -tehtävä saatettu päätökseen 28.10.2026. Hakemisto & tiedost
 Tehtävät 1, 2, 3 suoritettu 28.10.2026. Tehtävä 7 suoritettu 30.10.2026. Tehtävissä opittu tähän mennessä perusasioita; funktiot, tulostaminen, toistorakenteet jne. Pyrin jättämään kommentteihin itse testattuja asioita lopullisen tehtäväratkaisun rinnalle. Tehtävää 10 kokeiltu, mutta valitsin sen sijaan viimeiseksi tehtäväksi 6. Tehtävä 6 myös saatettu loppuun 30.10.2026.
 
 ## JS-moduuli 3 aloitettu 2.11.2026
-Tehtävä 3 osa 10 tehty 2.11.2026, äänestysohjelma jossa annat promptiin kuinka monta äänestäjää on, ja sitten kys. äänillä annat pisteet listalla oleville ehdokkaille. Ohjelma tulostaa konsoliin äänestyksen tulokset.
+Tehtävä 3 osa 10 tehty 2.11.2026, äänestysohjelma jossa annat promptiin kuinka monta äänestäjää on, ja sitten kys. äänillä annat pisteet listalla oleville ehdokkaille. Ohjelma tulostaa konsoliin äänestyksen tulokset. Tehtävä 3 osa 8 tehty 6.11.2026; listan objektien yhteenliimaus.
