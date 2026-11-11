@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link href="2.css" rel="stylesheet">
+    <script src="2.js" defer></script>
+</head>
+
+<body>
+    <h1>Task 2</h1>
+    <ul id="target">
+        <li>First item</li>
+        <li class="my-item">Second item</li>
+        <li>Third item</li>
+    </ul>
+    <div id="example"></div>
+    <script>
+        const div = document.querySelector("#example");
+        const html =
+            `<p>
+                Tässä on tekstiä ja kuva.
+                <img src="https://via.placeholder.com/320" alt="Kuva">
+            </p>`;
+        div.innerHTML = html;
+    </script>
+</body>
+
+</html>
