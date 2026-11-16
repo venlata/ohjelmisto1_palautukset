@@ -9,4 +9,4 @@ Tehtävät 1, 2, 3 suoritettu 28.10.2026. Tehtävä 7 suoritettu 30.10.2026. Teh
 Tehtävä 3 osa 10 tehty 2.11.2026, äänestysohjelma jossa annat promptiin kuinka monta äänestäjää on, ja sitten kys. äänillä annat pisteet listalla oleville ehdokkaille. Ohjelma tulostaa konsoliin äänestyksen tulokset. Tehtävä 3 osa 8 tehty 6.11.2026; listan objektien yhteenliimaus.
 
 ## JS-moduuli 4 aloitettu 11.11.2026
-Tehtävä 4 osa 1, 2, 3 tehty 11.11.2026. Jäljelle jää 4 pistettä toteutettavaksi. Tehtävä 4 osa 4 aloitettu 12.11. ja saatettu loppuun 14.11.2026 (laskintehtävä). Tehtävä olisi ollut huomattavasti helpompi jos olisin huomannut että käytin väärää id:tä operationin sijaan :D
+Tehtävä 4 osa 1, 2, 3 tehty 11.11.2026. Jäljelle jää 4 pistettä toteutettavaksi. Tehtävä 4 osa 8 aloitettu 12.11. ja saatettu loppuun 14.11.2026 (laskintehtävä). Tehtävä olisi ollut huomattavasti helpompi jos olisin huomannut että käytin väärää id:tä operationin sijaan :D
