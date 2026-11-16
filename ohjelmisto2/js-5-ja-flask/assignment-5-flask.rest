@@ -1,0 +1,5 @@
+GET http://127.0.0.1:3000/translate/hello
+### fshlahfl
+
+GET http://127.0.0.1:3000/translate/hewwo
+### fds

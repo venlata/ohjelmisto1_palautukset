@@ -10,3 +10,6 @@ Tehtävä 3 osa 10 tehty 2.11.2026, äänestysohjelma jossa annat promptiin kuin
 
 ## JS-moduuli 4 aloitettu 11.11.2026
 Tehtävä 4 osa 1, 2, 3 tehty 11.11.2026. Jäljelle jää 4 pistettä toteutettavaksi. Tehtävä 4 osa 8 aloitettu 12.11. ja saatettu loppuun 14.11.2026 (laskintehtävä). Tehtävä olisi ollut huomattavasti helpompi jos olisin huomannut että käytin väärää id:tä operationin sijaan :D
+
+## Python Flask -palvelin 16.11.2026
+Tehtävän osa 2 (sanakirjatehtävä) suoritettu 16.11.2026.
